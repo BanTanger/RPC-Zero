@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/agent/ClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/common/IOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-1/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-from-zero-0/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-from-zero-0/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,8 +167,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665281622548</updated>
-      <workItem from="1665281623737" duration="18603000" />
+      <workItem from="1665281623737" duration="18993000" />
     </task>
+    <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
+      <created>1665409152322</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665409152322</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +194,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
+    <option name="LAST_COMMIT_MESSAGE" value="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
   </component>
 </project>

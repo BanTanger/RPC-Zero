@@ -9,6 +9,6 @@ import com.bantanger.rpcfromzero.dao.User;
  * @Date 2022/10/9 10:21
  */
 public interface UserService {
-
+    // 模拟查询用户
     User getUserByUserId(Integer id);
 }
