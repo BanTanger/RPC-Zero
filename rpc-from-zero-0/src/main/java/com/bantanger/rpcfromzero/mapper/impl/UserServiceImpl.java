@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByUserId(Integer id) {
-        System.out.println("客户端模拟查询了id为 " + id + " 的用户");
+        System.out.println("客户端模拟查询了id为 " + id +  " 的用户");
         // 模拟雪花算法。从数据库中取出用户
         Random random = new Random();
         User user = User.builder()

@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client">
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/agent/ClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/client/IOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/dao/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/impl/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/SimpleRPCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/ThreadPoolRPCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/util/WorkThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-from-zero-0/src/test/java/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-from-zero-0/src/test/java/ApiTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本2: 代码解耦, 线程池(BIO优化)&#10;[update] 抽象 RPCServer, 将服务端的代码抽离&#10;[add] 实现RPC服务端:1.传统BIO方式 2.线程池优化&#10;[add] 实际工作线程 WorkThread 真正执行序列化反序列化操作&#10;[add] 使用反射技术将接口封装到map容器中&#10;[add] 新增接口 BlogService/impl" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665281622548</updated>
       <workItem from="1665281623737" duration="19821000" />
-      <workItem from="1665410048847" duration="9647000" />
+      <workItem from="1665410048847" duration="10112000" />
     </task>
     <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
       <created>1665409152322</created>
@@ -208,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665409328289</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="RPC版本2: 代码解耦, 线程池(BIO优化)&#10;[update] 抽象 RPCServer, 将服务端的代码抽离&#10;[add] 实现RPC服务端:1.传统BIO方式 2.线程池优化&#10;[add] 实际工作线程 WorkThread 真正执行序列化反序列化操作&#10;[add] 使用反射技术将接口封装到map容器中&#10;[add] 新增接口 BlogService/impl">
+      <created>1665503781827</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665503781827</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +215,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
     <MESSAGE value="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client" />
+    <MESSAGE value="RPC版本2: 代码解耦, 线程池(BIO优化)&#10;[update] 抽象 RPCServer, 将服务端的代码抽离&#10;[add] 实现RPC服务端:1.传统BIO方式 2.线程池优化&#10;[add] 实际工作线程 WorkThread 真正执行序列化反序列化操作&#10;[add] 使用反射技术将接口封装到map容器中&#10;[add] 新增接口 BlogService/impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="RPC版本2: 代码解耦, 线程池(BIO优化)&#10;[update] 抽象 RPCServer, 将服务端的代码抽离&#10;[add] 实现RPC服务端:1.传统BIO方式 2.线程池优化&#10;[add] 实际工作线程 WorkThread 真正执行序列化反序列化操作&#10;[add] 使用反射技术将接口封装到map容器中&#10;[add] 新增接口 BlogService/impl" />
   </component>
 </project>
