@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
+    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client">
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/agent/ClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/client/IOClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/dao/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/SimpleRPCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/server/ThreadPoolRPCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-2/src/main/java/com/bantanger/rpcfromzero/util/WorkThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-from-zero-0/src/test/java/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-from-zero-0/src/test/java/ApiTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,19 +84,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-from-zero-1/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-from-zero-2/src/main/java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-2\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-Zero\rpc-from-zero-1\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bantanger.rpcfromzero.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RPCServer (1)">
+  <component name="RunManager" selected="Application.RPCClient (2)">
     <configuration name="RPCClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.RPCClient" />
       <module name="rpc-from-zero-1" />
@@ -87,9 +111,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RPCClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="RPCClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.RPCClient" />
-      <module name="rpc-from-zero-0" />
+      <module name="rpc-from-zero-2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bantanger.rpcfromzero.client.*" />
@@ -100,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RPCServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="RPCServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.RPCServer" />
       <module name="rpc-from-zero-1" />
       <extension name="coverage">
@@ -113,9 +137,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RPCServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.RPCServer" />
-      <module name="rpc-from-zero-0" />
+    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.TestServer" />
+      <module name="rpc-from-zero-2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bantanger.rpcfromzero.server.*" />
@@ -151,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RPCClient (2)" />
+        <item itemvalue="Application.TestServer" />
+        <item itemvalue="JUnit.ApiTest.test1" />
         <item itemvalue="Application.RPCServer (1)" />
         <item itemvalue="Application.RPCClient (1)" />
-        <item itemvalue="Application.RPCClient" />
-        <item itemvalue="Application.RPCServer" />
-        <item itemvalue="JUnit.ApiTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +191,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665281622548</updated>
-      <workItem from="1665281623737" duration="18993000" />
+      <workItem from="1665281623737" duration="19821000" />
+      <workItem from="1665410048847" duration="9647000" />
     </task>
     <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
       <created>1665409152322</created>
@@ -176,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665409152322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client">
+      <created>1665409328289</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665409328289</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +230,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
-    <option name="LAST_COMMIT_MESSAGE" value="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
+    <MESSAGE value="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client" />
+    <option name="LAST_COMMIT_MESSAGE" value="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client" />
   </component>
 </project>

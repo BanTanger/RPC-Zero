@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="rpc-from-zero-1" />
         <module name="rpc-from-zero-0" />
+        <module name="rpc-from-zero-2" />
       </profile>
     </annotationProcessing>
   </component>

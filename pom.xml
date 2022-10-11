@@ -11,6 +11,7 @@
     <modules>
         <module>rpc-from-zero-0</module>
         <module>rpc-from-zero-1</module>
+        <module>rpc-from-zero-2</module>
     </modules>
 
     <properties>
@@ -34,6 +35,12 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.8.0-beta4</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

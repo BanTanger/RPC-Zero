@@ -1,5 +1,11 @@
+import com.bantanger.rpcfromzero.client.RPCClient;
+import com.bantanger.rpcfromzero.dao.User;
+import com.bantanger.rpcfromzero.mapper.UserService;
+import com.bantanger.rpcfromzero.mapper.impl.UserServiceImpl;
+import com.bantanger.rpcfromzero.server.RPCServer;
 import org.junit.Before;
 import org.junit.Test;
+import sun.management.resources.agent;
 
 import java.io.*;
 import java.util.Random;
@@ -14,6 +20,7 @@ public class ApiTest {
 
     File dir = new File("D:\\四级");
     File file = new File("E:\\Java 学习项目集合\\RPC-Zero\\rpc-from-zero-0\\src");
+    File file1 = new File("E:\\Java 学习项目集合\\RPC-From-Zero\\rpc-from-zero-1");
     @Test
     public void test() {
         System.out.println(new Random().nextInt());
@@ -22,8 +29,37 @@ public class ApiTest {
     @Test
     public void test1() {
 //        listAllFiles(dir);
-        System.out.println(file.getName());
-        tree(file, 1);
+//        System.out.println(file.getName());
+        System.out.println(file1.getName());
+        tree(file1, 1);
+    }
+
+    public static void tree(File f, int level) {
+        // 缩进量
+        String preStr = "";
+        for (int i = 0; i < level; i++) {
+            if (i == level - 1) {
+                preStr = preStr + "└─";
+            } else {
+                // 级别 - 代表这个目下下地子文件夹
+                preStr = preStr + "    ";
+            }
+        }
+        // 返回一个抽象路径名数组，这些路径名表示此抽象路径名所表示目录中地文件
+        File[] childs = f.listFiles();
+        for (int i = 0; i < childs.length; i++) {
+            // 打印子文件的名字
+            if(!childs[i].getName().equals("pom.xml")
+                || !childs[i].getName().equals("target")
+                || !childs[i].getName().equals("generated-sources")) {
+                System.out.println(preStr + childs[i].getName());
+                // 测试此抽象路径名表示地文件能否是一个目录
+                if (childs[i].isDirectory()) {
+                    // 假如子目录下还有子目录，递归子目录调用此方法
+                    tree(childs[i], level + 1);
+                }
+            }
+        }
     }
 
     /**
@@ -73,6 +109,7 @@ public class ApiTest {
     @Test
     public void test3() throws IOException {
         readFileContent("D:\\test\\b.txt");
+
     }
 
     /**
@@ -96,27 +133,5 @@ public class ApiTest {
         bufferedReader.close();
     }
 
-    public static void tree(File f, int level) {
-        // 缩进量
-        String preStr = "";
-        for (int i = 0; i < level; i++) {
-            if (i == level - 1) {
-                preStr = preStr + "└─";
-            } else {
-                // 级别 - 代表这个目下下地子文件夹
-                preStr = preStr + "    ";
-            }
-        }
-        // 返回一个抽象路径名数组，这些路径名表示此抽象路径名所表示目录中地文件
-        File[] childs = f.listFiles();
-        for (int i = 0; i < childs.length; i++) {
-            // 打印子文件的名字
-            System.out.println(preStr + childs[i].getName());
-            // 测试此抽象路径名表示地文件能否是一个目录
-            if (childs[i].isDirectory()) {
-                // 假如子目录下还有子目录，递归子目录调用此方法
-                tree(childs[i], level + 1);
-            }
-        }
-    }
+
 }
