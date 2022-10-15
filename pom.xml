@@ -12,6 +12,8 @@
         <module>rpc-from-zero-0</module>
         <module>rpc-from-zero-1</module>
         <module>rpc-from-zero-2</module>
+        <module>rpc-from-zero-3</module>
+        <module>NIO-Study-Test</module>
     </modules>
 
     <properties>
@@ -41,6 +43,11 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.51.Final</version>
         </dependency>
     </dependencies>
 
