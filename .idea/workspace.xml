@@ -4,39 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client">
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/block/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/block/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/nio_thread/MultiThreadServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/nio_thread/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/nio_write/WriteClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/nio_write/WriteServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/nio_write/WriteServer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/non_block/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/non_block/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NIO-Study-Test/src/main/java/com/bantanger/nio_test/util/ByteBufferUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/agent/RPCClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/client/IOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/client/SimpleRPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/client/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/dao/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/mapper/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/mapper/impl/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/server/SimpleRPCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/server/ThreadPoolRPCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/main/java/com/bantanger/rpcfromzero/util/WorkThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-3/src/test/java/CopyFileNIOTest.java" afterDir="false" />
+    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="NIO代码演示: 阻塞和非阻塞, 多线程优化">
+      <change afterPath="$PROJECT_DIR$/Netty-Study-Test/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Study-Test/src/main/java/com/bantanger/netty/HelloClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Study-Test/src/main/java/com/bantanger/netty/HelloServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Study-Test/src/main/java/com/bantanger/netty2/MyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Netty-Study-Test/src/main/java/com/bantanger/netty2/MyServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -109,17 +82,57 @@
       <recent name="E:\Java 学习项目集合\RPC-Zero\rpc-from-zero-1\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bantanger.netty" />
       <recent name="com.bantanger.nio_test.nio_write" />
       <recent name="com.bantanger.rpcfromzero.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestClient">
-    <configuration name="MultiThreadServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.nio_test.nio_thread.MultiThreadServer" />
-      <module name="NIO-Study-Test" />
+  <component name="RunManager" selected="Application.MyClient">
+    <configuration name="HelloClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.netty.HelloClient" />
+      <module name="Netty-Study-Test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bantanger.nio_test.nio_thread.*" />
+          <option name="PATTERN" value="com.bantanger.netty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.netty.HelloServer" />
+      <module name="Netty-Study-Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bantanger.netty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.netty2.MyClient" />
+      <module name="Netty-Study-Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bantanger.netty2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.netty2.MyServer" />
+      <module name="Netty-Study-Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bantanger.netty2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,45 +146,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bantanger.nio_test.nio_thread.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WriteClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.nio_test.nio_write.WriteClient" />
-      <module name="NIO-Study-Test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bantanger.nio_test.nio_write.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WriteServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.nio_test.nio_write.WriteServer" />
-      <module name="NIO-Study-Test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bantanger.nio_test.nio_write.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WriteServer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.nio_test.nio_write.WriteServer2" />
-      <module name="NIO-Study-Test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bantanger.nio_test.nio_write.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -194,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyClient" />
+        <item itemvalue="Application.MyServer" />
+        <item itemvalue="Application.HelloClient" />
+        <item itemvalue="Application.HelloServer" />
         <item itemvalue="Application.TestClient" />
-        <item itemvalue="Application.MultiThreadServer" />
-        <item itemvalue="Application.WriteClient" />
-        <item itemvalue="Application.WriteServer2" />
-        <item itemvalue="Application.WriteServer" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +185,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665281622548</updated>
       <workItem from="1665281623737" duration="19821000" />
-      <workItem from="1665410048847" duration="32701000" />
+      <workItem from="1665410048847" duration="39241000" />
     </task>
     <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
       <created>1665409152322</created>
@@ -241,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665503890263</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="NIO代码演示: 阻塞和非阻塞, 多线程优化">
+      <created>1665848864678</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665848864678</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +246,8 @@
     <MESSAGE value="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类" />
     <MESSAGE value="RPC版本2: 代码解耦, 线程池(BIO优化)&#10;[update] 抽象 RPCServer, 将服务端的代码抽离&#10;[add] 实现RPC服务端:1.传统BIO方式 2.线程池优化&#10;[add] 实际工作线程 WorkThread 真正执行序列化反序列化操作&#10;[add] 使用反射技术将接口封装到map容器中&#10;[add] 新增接口 BlogService/impl" />
     <MESSAGE value="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="RPC版本0: 定制最最简单的RPC框架&#10;[add] 服务端Service, 客户端Client" />
+    <MESSAGE value="NIO代码演示: 阻塞和非阻塞, 多线程优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="NIO代码演示: 阻塞和非阻塞, 多线程优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -285,7 +267,15 @@
           <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/Netty-Study-Test/src/main/java/com/bantanger/netty2/MyClient.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
     </breakpoint-manager>
   </component>
 </project>

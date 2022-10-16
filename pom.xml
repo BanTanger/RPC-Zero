@@ -14,6 +14,7 @@
         <module>rpc-from-zero-2</module>
         <module>rpc-from-zero-3</module>
         <module>NIO-Study-Test</module>
+        <module>Netty-Study-Test</module>
     </modules>
 
     <properties>

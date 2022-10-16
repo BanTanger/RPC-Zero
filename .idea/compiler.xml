@@ -9,6 +9,7 @@
         <module name="rpc-from-zero-1" />
         <module name="rpc-from-zero-0" />
         <module name="NIO-Study-Test" />
+        <module name="Netty-Study-Test" />
         <module name="rpc-from-zero-3" />
         <module name="rpc-from-zero-2" />
       </profile>
