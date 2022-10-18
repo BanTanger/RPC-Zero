@@ -10,6 +10,7 @@ import com.bantanger.rpcfromzero.common.RPCResponse;
  * @Date 2022/10/9 18:57
  */
 
+// 共性(发送请求request和获取响应response)
 public interface RPCClient {
 
     RPCResponse sendRequest(RPCRequest request);

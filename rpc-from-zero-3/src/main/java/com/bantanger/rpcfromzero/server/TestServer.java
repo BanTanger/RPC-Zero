@@ -4,6 +4,7 @@ import com.bantanger.rpcfromzero.mapper.BlogService;
 import com.bantanger.rpcfromzero.mapper.UserService;
 import com.bantanger.rpcfromzero.mapper.impl.BlogServiceImpl;
 import com.bantanger.rpcfromzero.mapper.impl.UserServiceImpl;
+import com.bantanger.rpcfromzero.server.impl.NettyRPCServer;
 import com.bantanger.rpcfromzero.util.ServiceProvider;
 
 /**
@@ -25,8 +26,11 @@ public class TestServer {
         serviceProvider.provideServiceInterface(blogService);
 
 //        RPCServer rpcServer = new SimpleRPCRPCServer(serviceProvider);
-        ThreadPoolRPCRPCServer rpcServer = new ThreadPoolRPCRPCServer(serviceProvider);
+//        ThreadPoolRPCRPCServer threadPoolRPCRPCServer = new ThreadPoolRPCRPCServer(serviceProvider);
+        NettyRPCServer nettyRPCServer = new NettyRPCServer(serviceProvider);
 
-        rpcServer.start(port);
+//        rpcServer.start(port);
+//        threadPoolRPCRPCServer.start(port);
+        nettyRPCServer.start(port);
     }
 }

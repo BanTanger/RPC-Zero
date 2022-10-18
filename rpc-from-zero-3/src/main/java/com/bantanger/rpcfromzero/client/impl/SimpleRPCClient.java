@@ -1,5 +1,6 @@
-package com.bantanger.rpcfromzero.client;
+package com.bantanger.rpcfromzero.client.impl;
 
+import com.bantanger.rpcfromzero.client.RPCClient;
 import com.bantanger.rpcfromzero.common.RPCRequest;
 import com.bantanger.rpcfromzero.common.RPCResponse;
 import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ import java.net.Socket;
  * @Date 2022/10/12 23:00
  */
 
+// SimpleRPCClient 实现这个接口，不同的网络方式有着不同的实现
 @AllArgsConstructor
 public class SimpleRPCClient implements RPCClient {
 

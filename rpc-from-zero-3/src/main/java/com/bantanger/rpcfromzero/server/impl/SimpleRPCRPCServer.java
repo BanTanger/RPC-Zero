@@ -1,5 +1,6 @@
-package com.bantanger.rpcfromzero.server;
+package com.bantanger.rpcfromzero.server.impl;
 
+import com.bantanger.rpcfromzero.server.RPCServer;
 import com.bantanger.rpcfromzero.util.ServiceProvider;
 import com.bantanger.rpcfromzero.util.WorkThread;
 import org.slf4j.Logger;

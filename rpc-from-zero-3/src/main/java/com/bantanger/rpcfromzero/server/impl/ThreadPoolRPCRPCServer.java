@@ -1,5 +1,6 @@
-package com.bantanger.rpcfromzero.server;
+package com.bantanger.rpcfromzero.server.impl;
 
+import com.bantanger.rpcfromzero.server.RPCServer;
 import com.bantanger.rpcfromzero.util.ServiceProvider;
 import com.bantanger.rpcfromzero.util.WorkThread;
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  * @Description 线程池版服务端启动类
  * @Date 2022/10/11 23:02
  */
-public class ThreadPoolRPCRPCServer implements RPCServer{
+public class ThreadPoolRPCRPCServer implements RPCServer {
 
     private static final Logger logger = LoggerFactory.getLogger(SimpleRPCRPCServer.class);
 

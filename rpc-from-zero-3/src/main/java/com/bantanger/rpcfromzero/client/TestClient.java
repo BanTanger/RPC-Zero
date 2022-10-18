@@ -1,6 +1,7 @@
 package com.bantanger.rpcfromzero.client;
 
 import com.bantanger.rpcfromzero.agent.RPCClientProxy;
+import com.bantanger.rpcfromzero.client.impl.NettyRPCClient;
 import com.bantanger.rpcfromzero.dao.Blog;
 import com.bantanger.rpcfromzero.dao.User;
 import com.bantanger.rpcfromzero.mapper.BlogService;
@@ -32,9 +33,11 @@ public class TestClient {
     }
 
     public static void main(String[] args) {
-        SimpleRPCClient simpleRPCClient = new SimpleRPCClient(host, port);
+//        SimpleRPCClient simpleRPCClient = new SimpleRPCClient(host, port);
+        NettyRPCClient nettyRPCClient = new NettyRPCClient(host, port);
         // 使用代理类调用不同的方法
-        RPCClientProxy clientProxy = new RPCClientProxy(simpleRPCClient);
+//        RPCClientProxy clientProxy = new RPCClientProxy(simpleRPCClient);
+        RPCClientProxy clientProxy = new RPCClientProxy(nettyRPCClient);
         UserService userService = (UserService) clientProxy.getProxy(interfaces.get("UserService"));
 
         // 执行服务1
@@ -47,9 +50,9 @@ public class TestClient {
 
         // 新增接口测试方法
         BlogService blogService = (BlogService) clientProxy.getProxy(interfaces.get("BlogService"));
-        for(int i = 0; i < 100; i ++) {
-            Blog blogById = blogService.getBlogById(100 + i);
+//        for(int i = 0; i < 100; i ++) {
+            Blog blogById = blogService.getBlogById(100 /*+ i*/);
             logger.info("服务器端发送返回消息 Blog = {}", blogById);
-        }
+//        }
     }
 }
