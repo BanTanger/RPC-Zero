@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rpc-from-zero-1" />
-        <module name="rpc-from-zero-0" />
         <module name="NIO-Study-Test" />
         <module name="Netty-Study-Test" />
+        <module name="rpc-from-zero-4" />
         <module name="rpc-from-zero-3" />
         <module name="rpc-from-zero-2" />
+        <module name="rpc-from-zero-1" />
+        <module name="rpc-from-zero-0" />
       </profile>
     </annotationProcessing>
   </component>

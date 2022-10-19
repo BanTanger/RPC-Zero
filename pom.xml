@@ -15,6 +15,7 @@
         <module>rpc-from-zero-3</module>
         <module>NIO-Study-Test</module>
         <module>Netty-Study-Test</module>
+        <module>rpc-from-zero-4</module>
     </modules>
 
     <properties>
@@ -49,6 +50,11 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.51.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.67</version>
         </dependency>
     </dependencies>
 
