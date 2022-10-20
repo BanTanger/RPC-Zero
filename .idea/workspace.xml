@@ -4,38 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本3: Netty高性能网络框架的使用&#10;[update] 提升RPC性能: 通过使用Netty网络框架，实现从BIO到NIO的网络IO模型的过渡&#10;[fix] 重构客户端代码, 抽象接口RPCClient, 抽象通用方法: sendRequest &#10;[add] NettyRPCClient 和 NettyRPCServer&#10;[add] 自定义初始化器统一消息传输格式, 通过Netty内部的LTC方法解决TCP黏包半包问题">
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/agent/RPCClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/handler/NettyClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/impl/NettyRPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/impl/SimpleRPCClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/initializer/NettyClientInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/codec/Serializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/codec/impl/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/codec/impl/ObjectSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/codec/mycoder/MyDecode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/codec/mycoder/MyEncode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/dao/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/mapper/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/mapper/impl/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/handler/NettyServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/impl/NettyRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/impl/SimpleRPCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/impl/ThreadPoolRPCRPCServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/server/initializer/NettyServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/util/MessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/util/WorkThread.java" afterDir="false" />
+    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本4: 新增序列化方式Json, 自定义编解码器, 对编码格式的设计&#10;[add] 自定义协议格式: 2Byte消息类型, 2Byte序列化方式(0, 1), 4Byte消息长度&#10;[add] 自定义编解码方式encode,decode, 代替版本3中的自定义长度解码器, 解决TCP黏包问题&#10;[add] Json序列化和反序列化的实现">
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/agent/RPCClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/client/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/client/handler/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/client/impl/NettyRPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/client/impl/SimpleRPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/client/initializer/NettyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/codec/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/codec/impl/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/codec/impl/ObjectSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/codec/mycoder/MyDecode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/codec/mycoder/MyEncode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/dao/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/mapper/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/mapper/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/handler/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/impl/NettyRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/impl/SimpleRPCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/impl/ThreadPoolRPCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/initializer/NettyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/util/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/util/WorkThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -96,33 +98,33 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-from-zero-4/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-from-zero-5/src/main/java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-5\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-4\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\NIO-Study-Test\src\main\java\com\bantanger\nio_test\non_block" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-3\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-2\src\main\java" />
-      <recent name="E:\Java 学习项目集合\RPC-Zero\rpc-from-zero-1\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bantanger.rpcfromzero.register" />
       <recent name="com.bantanger.rpcfromzero.codec.mycode" />
       <recent name="com.bantanger.rpcfromzero.codec.impl" />
       <recent name="com.bantanger.netty" />
       <recent name="com.bantanger.nio_test.nio_write" />
-      <recent name="com.bantanger.rpcfromzero.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestServer (1)">
-    <configuration name="ReadClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.handler.ReadClient" />
-      <module name="Netty-Study-Test" />
+  <component name="RunManager" selected="Application.TestClient (2)">
+    <configuration name="TestClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.TestClient" />
+      <module name="rpc-from-zero-4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bantanger.handler.*" />
+          <option name="PATTERN" value="com.bantanger.rpcfromzero.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,9 +132,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.TestClient" />
-      <module name="rpc-from-zero-4" />
+      <module name="rpc-from-zero-5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bantanger.rpcfromzero.client.*" />
@@ -169,9 +171,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestServer (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.TestServer" />
-      <module name="rpc-from-zero-3" />
+      <module name="rpc-from-zero-5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bantanger.rpcfromzero.server.*" />
@@ -184,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestServer (2)" />
+        <item itemvalue="Application.TestClient (2)" />
         <item itemvalue="Application.TestClient (1)" />
         <item itemvalue="Application.TestServer (1)" />
         <item itemvalue="Application.TestClient" />
-        <item itemvalue="Application.TestServer" />
-        <item itemvalue="Application.ReadClient" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +205,7 @@
       <workItem from="1665281623737" duration="19821000" />
       <workItem from="1665410048847" duration="46183000" />
       <workItem from="1666061501372" duration="19118000" />
+      <workItem from="1666173008266" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
       <created>1665409152322</created>
@@ -253,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666082617963</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="RPC版本4: 新增序列化方式Json, 自定义编解码器, 对编码格式的设计&#10;[add] 自定义协议格式: 2Byte消息类型, 2Byte序列化方式(0, 1), 4Byte消息长度&#10;[add] 自定义编解码方式encode,decode, 代替版本3中的自定义长度解码器, 解决TCP黏包问题&#10;[add] Json序列化和反序列化的实现">
+      <created>1666173295169</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666173295169</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +290,8 @@
     <MESSAGE value="NIO代码演示: 阻塞和非阻塞, 多线程优化" />
     <MESSAGE value="Netty代码演示: 入门案例，收发数据" />
     <MESSAGE value="RPC版本3: Netty高性能网络框架的使用&#10;[update] 提升RPC性能: 通过使用Netty网络框架，实现从BIO到NIO的网络IO模型的过渡&#10;[fix] 重构客户端代码, 抽象接口RPCClient, 抽象通用方法: sendRequest &#10;[add] NettyRPCClient 和 NettyRPCServer&#10;[add] 自定义初始化器统一消息传输格式, 通过Netty内部的LTC方法解决TCP黏包半包问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="RPC版本3: Netty高性能网络框架的使用&#10;[update] 提升RPC性能: 通过使用Netty网络框架，实现从BIO到NIO的网络IO模型的过渡&#10;[fix] 重构客户端代码, 抽象接口RPCClient, 抽象通用方法: sendRequest &#10;[add] NettyRPCClient 和 NettyRPCServer&#10;[add] 自定义初始化器统一消息传输格式, 通过Netty内部的LTC方法解决TCP黏包半包问题" />
+    <MESSAGE value="RPC版本4: 新增序列化方式Json, 自定义编解码器, 对编码格式的设计&#10;[add] 自定义协议格式: 2Byte消息类型, 2Byte序列化方式(0, 1), 4Byte消息长度&#10;[add] 自定义编解码方式encode,decode, 代替版本3中的自定义长度解码器, 解决TCP黏包问题&#10;[add] Json序列化和反序列化的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="RPC版本4: 新增序列化方式Json, 自定义编解码器, 对编码格式的设计&#10;[add] 自定义协议格式: 2Byte消息类型, 2Byte序列化方式(0, 1), 4Byte消息长度&#10;[add] 自定义编解码方式encode,decode, 代替版本3中的自定义长度解码器, 解决TCP黏包问题&#10;[add] Json序列化和反序列化的实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,13 +9,14 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>NIO-Study-Test</module>
+        <module>Netty-Study-Test</module>
         <module>rpc-from-zero-0</module>
         <module>rpc-from-zero-1</module>
         <module>rpc-from-zero-2</module>
         <module>rpc-from-zero-3</module>
-        <module>NIO-Study-Test</module>
-        <module>Netty-Study-Test</module>
         <module>rpc-from-zero-4</module>
+        <module>rpc-from-zero-5</module>
     </modules>
 
     <properties>
@@ -55,6 +56,17 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.67</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+        <!--防止curator报warn-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
     </dependencies>
 
