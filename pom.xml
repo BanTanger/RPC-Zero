@@ -17,6 +17,7 @@
         <module>rpc-from-zero-3</module>
         <module>rpc-from-zero-4</module>
         <module>rpc-from-zero-5</module>
+        <module>rpc-from-zero-6</module>
     </modules>
 
     <properties>

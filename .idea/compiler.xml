@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="NIO-Study-Test" />
         <module name="Netty-Study-Test" />
+        <module name="rpc-from-zero-6" />
         <module name="rpc-from-zero-5" />
         <module name="rpc-from-zero-4" />
         <module name="rpc-from-zero-3" />

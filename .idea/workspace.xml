@@ -5,8 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本5: 引入Zk作为注册中心&#10;[update] 服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端">
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/agent/RPCClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/client/RPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/client/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/client/handler/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/client/impl/NettyRPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/client/impl/SimpleRPCClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/client/initializer/NettyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/codec/Serializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/codec/impl/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/codec/impl/ObjectSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/codec/mycoder/MyDecode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/codec/mycoder/MyEncode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/common/RPCRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/common/RPCResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/dao/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/dao/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/loadbalance/LoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/loadbalance/impl/RandomLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/loadbalance/impl/RoundLoadBalance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/mapper/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/mapper/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/mapper/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/mapper/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/register/ServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/RPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/TestServer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/handler/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/impl/NettyRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/impl/SimpleRPCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/impl/ThreadPoolRPCRPCServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/server/initializer/NettyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/util/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/util/WorkThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +54,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,40 +104,27 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-from-zero-5/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-from-zero-6/src/main/java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-6\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-5\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-4\src\main\java" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\NIO-Study-Test\src\main\java\com\bantanger\nio_test\non_block" />
       <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-3\src\main\java" />
-      <recent name="E:\Java 学习项目集合\RPC-From-Zero\rpc-from-zero-2\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bantanger.rpcfromzero.server" />
+      <recent name="com.bantanger.rpcfromzero.loadbalance.impl" />
       <recent name="com.bantanger.rpcfromzero.register" />
       <recent name="com.bantanger.rpcfromzero.codec.mycode" />
       <recent name="com.bantanger.rpcfromzero.codec.impl" />
-      <recent name="com.bantanger.netty" />
-      <recent name="com.bantanger.nio_test.nio_write" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestClient (2)">
-    <configuration name="TestClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.TestClient" />
-      <module name="rpc-from-zero-4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bantanger.rpcfromzero.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TestClient">
     <configuration name="TestClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.TestClient" />
       <module name="rpc-from-zero-5" />
@@ -114,23 +140,10 @@
     </configuration>
     <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.client.TestClient" />
-      <module name="rpc-from-zero-3" />
+      <module name="rpc-from-zero-6" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.bantanger.rpcfromzero.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.TestServer" />
-      <module name="rpc-from-zero-4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bantanger.rpcfromzero.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,13 +164,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestServer" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.TestServer" />
+      <module name="rpc-from-zero-6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bantanger.rpcfromzero.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestServer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bantanger.rpcfromzero.server.TestServer2" />
+      <module name="rpc-from-zero-6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bantanger.rpcfromzero.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestClient" />
+      <item itemvalue="Application.TestClient (2)" />
+      <item itemvalue="Application.TestServer" />
+      <item itemvalue="Application.TestServer (2)" />
+      <item itemvalue="Application.TestServer2" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestClient" />
+        <item itemvalue="Application.TestServer2" />
+        <item itemvalue="Application.TestServer" />
         <item itemvalue="Application.TestClient (2)" />
         <item itemvalue="Application.TestServer (2)" />
-        <item itemvalue="Application.TestClient (1)" />
-        <item itemvalue="Application.TestServer (1)" />
-        <item itemvalue="Application.TestClient" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +218,7 @@
       <workItem from="1665281623737" duration="19821000" />
       <workItem from="1665410048847" duration="46183000" />
       <workItem from="1666061501372" duration="19118000" />
-      <workItem from="1666173008266" duration="8145000" />
+      <workItem from="1666173008266" duration="12044000" />
     </task>
     <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
       <created>1665409152322</created>
@@ -244,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666251829740</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="RPC版本5: 引入Zk作为注册中心&#10;[update] 服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端">
+      <created>1666252707196</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666252707196</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,24 +333,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/TestClient.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java</url>
           <line>51</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/rpc-from-zero-6/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
