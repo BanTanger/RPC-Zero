@@ -78,7 +78,7 @@ public class ZkServiceRegister implements ServiceRegister {
     @Override
     public InetSocketAddress serviceDiscovery(String serviceName) {
         try {
-            // 得到的是 .........................
+            // 得到的是 服务接口地址集合(分布式环境下多台机器拥有着相同的接口名但不同的接口地址)
             List<String> strings = client.getChildren().forPath("/" + serviceName);
             // 这里默认使用第一个，后面启用负载均衡模式
             String string = strings.get(0);
@@ -90,7 +90,7 @@ public class ZkServiceRegister implements ServiceRegister {
     }
 
     /**
-     * 地址 -> XXX.XXX.XXX.XXX:port 字符串
+     * 地址 -> XXX.XXX.XXX.XXX(主机名):port(端口) 字符串
      * @param serviceAddress 服务接口地址路径
      * @return String 类型的服务接口地址路径
      */

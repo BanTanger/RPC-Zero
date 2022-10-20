@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本5: 引入Zk作为注册中心,服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端" />
+    <list default="true" id="8c08a0c7-0b48-4f02-95d0-9d82ed8e588a" name="Changes" comment="RPC版本5: 引入Zk作为注册中心&#10;[update] 服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -149,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestServer (2)" />
         <item itemvalue="Application.TestClient (2)" />
+        <item itemvalue="Application.TestServer (2)" />
         <item itemvalue="Application.TestClient (1)" />
         <item itemvalue="Application.TestServer (1)" />
         <item itemvalue="Application.TestClient" />
@@ -168,7 +172,7 @@
       <workItem from="1665281623737" duration="19821000" />
       <workItem from="1665410048847" duration="46183000" />
       <workItem from="1666061501372" duration="19118000" />
-      <workItem from="1666173008266" duration="7015000" />
+      <workItem from="1666173008266" duration="8145000" />
     </task>
     <task id="LOCAL-00001" summary="RPC版本1: 反射 + 动态代理, 抽象Request/Response方法&#10;[add] 定义统一消息格式Request和Response&#10;[update] 拆分客户端，使其更加松耦合，不再与特定的Host,Port绑定，使用ConcurrentHashMap存放接口类型&#10;[update] 使用动态代理和反射机制抽象了客户端类">
       <created>1665409152322</created>
@@ -233,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666251551312</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="RPC版本5: 引入Zk作为注册中心&#10;[update] 服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端">
+      <created>1666251829740</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666251829740</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +273,8 @@
     <MESSAGE value="RPC版本3: Netty高性能网络框架的使用&#10;[update] 提升RPC性能: 通过使用Netty网络框架，实现从BIO到NIO的网络IO模型的过渡&#10;[fix] 重构客户端代码, 抽象接口RPCClient, 抽象通用方法: sendRequest &#10;[add] NettyRPCClient 和 NettyRPCServer&#10;[add] 自定义初始化器统一消息传输格式, 通过Netty内部的LTC方法解决TCP黏包半包问题" />
     <MESSAGE value="RPC版本4: 新增序列化方式Json, 自定义编解码器, 对编码格式的设计&#10;[add] 自定义协议格式: 2Byte消息类型, 2Byte序列化方式(0, 1), 4Byte消息长度&#10;[add] 自定义编解码方式encode,decode, 代替版本3中的自定义长度解码器, 解决TCP黏包问题&#10;[add] Json序列化和反序列化的实现" />
     <MESSAGE value="RPC版本5: 引入Zk作为注册中心,服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端" />
-    <option name="LAST_COMMIT_MESSAGE" value="RPC版本5: 引入Zk作为注册中心,服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端" />
+    <MESSAGE value="RPC版本5: 引入Zk作为注册中心&#10;[update] 服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端" />
+    <option name="LAST_COMMIT_MESSAGE" value="RPC版本5: 引入Zk作为注册中心&#10;[update] 服务端上线时,在注册中心注册自己的服务与对应地址,而客户端调用服务时,去注册中心查找对应的服务端地址&#10;[add] 引入Curator简化Zk的繁琐开发&#10;[add] 新增注册接口以及实现类,实现注册:保存服务与地址, 查询:根据服务名查询地址两大功能&#10;[fix] 重构客户端和服务端的逻辑，将注册逻辑从客户端转移到服务端" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,6 +283,21 @@
           <url>file://$PROJECT_DIR$/rpc-from-zero-4/src/main/java/com/bantanger/rpcfromzero/client/TestClient.java</url>
           <line>38</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/register/ZkServiceRegister.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/util/ServiceProvider.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-from-zero-5/src/main/java/com/bantanger/rpcfromzero/server/TestServer.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
